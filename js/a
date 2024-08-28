@@ -1,0 +1,23 @@
+/*function adjustTextareaHeight() {
+  var textarea = tex2;
+  
+  if (textarea) {
+      textarea.style.height = 'auto';
+      textarea.style.height = `${textarea.scrollHeight}px`;
+  }
+}*/
+
+
+function adjustTextareaHeight() {
+    var textarea =tex2
+    if (textarea) {
+      textarea.style.height = 'auto';
+      textarea.style.height = `${textarea.scrollHeight}px`;
+      adjustTextareaHeight();
+      textarea.addEventListener('input', adjustTextareaHeight);
+      window.addEventListener('resize', adjustTextareaHeight);
+    }
+      Tex2.style.backgroundColor = '#F6F6F6';
+      Tex2.style.color = '#495057';
+      tex1.value = "";
+  }
